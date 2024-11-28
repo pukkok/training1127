@@ -1,0 +1,1 @@
+console.log('동작')
