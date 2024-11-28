@@ -1,1 +1,3 @@
-console.log('동작')
+import './style.css'
+
+console.log('작동 확인')
