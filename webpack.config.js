@@ -20,4 +20,13 @@ export default {
     ],
   },
   mode: 'development', // 개발 모드
+  devServer: {
+    static: {
+      directory: path.resolve(__dirname, 'public'), // HTML 파일 위치
+    },
+    compress: true, // 파일 압축
+    port: 5000, // 개발 서버 포트
+    open: true, // 서버 실행 후 브라우저 자동 열기
+    hot: true, // 변경 시 브라우저 자동 갱신
+  },
 }
