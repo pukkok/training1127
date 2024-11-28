@@ -7,7 +7,8 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "start": "node exce/index.js"
+    "build": "webpack",
+    "start": "yarn build && node exec/server.js"
   },
   "devDependencies": {
     "css-loader": "^7.1.2",
