@@ -1,17 +1,23 @@
 import path from 'path'
+import { fileURLToPath } from 'url'
+
+// __dirname 대체
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 export default {
-  entry: './src/index.js',
+  entry: './src/index.js', // 엔트리 파일
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'dist'), // 결과물 저장 디렉토리
+    filename: 'bundle.js', // 번들 파일 이름
   },
   module: {
     rules: [
       {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'], // CSS를 JavaScript에서 import 가능하도록 처리
+        test: /\.css$/, // CSS 파일 로드 규칙
+        use: ['style-loader', 'css-loader'],
       },
     ],
   },
-};
+  mode: 'development', // 개발 모드
+}
