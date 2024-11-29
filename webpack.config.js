@@ -11,6 +11,9 @@ export default {
     path: path.resolve(__dirname, 'dist'), // 결과물 저장 디렉토리
     filename: 'bundle.js', // 번들 파일 이름
   },
+  resolve: {
+    extensions: [".js", ".mjs"],
+  },
   module: {
     rules: [
       {
