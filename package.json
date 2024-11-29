@@ -5,7 +5,6 @@
   "repository": "https://github.com/pukkok/training1127.git",
   "author": "Pukkok <krystalgggg@gmail.com>",
   "license": "MIT",
-  "type": "module",
   "scripts": {
     "build": "webpack",
     "start": "yarn build && node exec/server.js",
